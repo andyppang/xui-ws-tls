@@ -52,6 +52,23 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 
     ~/.acme.sh/acme.sh  --issue -d 输入你的域名  --standalone
     
+ ### 关于tk泛域名申请证书
+ 
+ cloudflare不支持tk域名的泛域名证书，可以将tk域名解析到http://freedns.afraid.org/
+ 
+ 然后终端输入
+     
+     export FREEDNS_User="XXX@qq.com"
+     export FREEDNS_Password="XXXXXX"
+ 
+ 也就是afraid的用户名和密码，相当于cloudflare的api
+ 
+ 进行申请
+ 
+     ~/.acme.sh/acme.sh --issue --dns dns_freedns -d XXX.tk -d *.XXX.tk
+     
+ 好像afraid的二级域名解析，不能用*解析，也可能是自己理解问题，暂时一个一个解析
+
  ### 下载证书及密钥
  
     ~/.acme.sh/acme.sh --installcert -d 输入你的域名 --key-file /root/private.key --fullchain-file /root/cert.crt
@@ -99,3 +116,7 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 如何遇到打不开的情况，可能是端口没有放行，用【方法1】键入停止防火墙代码，或键入开放端口代码。
 
 - 3、V2ray软件：设置——参数设置——V2rayN设置——Core类型改为Xray_Core
+
+## 鸣谢：
+
+https://blog.801100.tk/archives/freedom-ssl
