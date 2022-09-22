@@ -120,3 +120,5 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 ## 鸣谢：
 
 https://blog.801100.tk/archives/freedom-ssl
+
+https://github.com/KEJIXIAOLU/dajian
